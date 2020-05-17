@@ -1,4 +1,4 @@
-nclude <iostream>
+#include <iostream>
 
 typedef struct element{
   int key;
@@ -21,4 +21,16 @@ void merge(Element list[], Element sorted[], int i, int mid, int n) {
     while(j<=n) sorted[k++] = list[j++]; 
   else
     while(i<=mid) sorted[k++] = list[i++]; 
+}
+
+
+int main() {
+  
+  Element list[10]={2,4,9,80,97,12,18,42,55,62};
+  Element sorted[10];
+  merge(list, sorted, 0, 4, 9);
+
+  
+
+  //결과는?
 }
