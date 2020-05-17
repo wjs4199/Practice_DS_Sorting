@@ -7,14 +7,14 @@ typedef struct element{
   int key;
 }Element; 
 
-void merge(Element list[], Element sorted[], int i, int mid, int n) {
+void merge(int list[],int sorted[], int i, int mid, int n) {
   //i=> 리스트의 첫번째 , mid=> 리스트를 반으로 나눈 수, n=>리스트의 길이(마지막을 가리킴)
   int j, k, t; 
   j = mid + 1;
   k = i; 
 
   while(i <= mid && j <= n){ 
-    if(list[i].key < list[j].key) sorted[k++] = list[i++]; 
+    if(list[i] < list[j]) sorted[k++] = list[i++]; 
     else sorted[k++] = list[j++]; 
   } 
 
@@ -29,12 +29,12 @@ void merge(Element list[], Element sorted[], int i, int mid, int n) {
 
 int main() {
   
-  Element list[10]={2,4,9,80,97,12,18,42,55,62};
-  Element sorted[10];
+  int list[10]={2,4,9,80,97,12,18,42,55,62};
+  int sorted[10];
   merge(list, sorted, 0, 4, 9);
 
   for(int i=0; i<10;i++){
-	cerr <<list[i]<<" " << endl;
+	cout <<list[i]<<" " << endl;
 }
   
 
