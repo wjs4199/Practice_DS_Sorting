@@ -1,5 +1,8 @@
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
+using namespace std;
 typedef struct element{
   int key;
 }Element; 
@@ -30,6 +33,9 @@ int main() {
   Element sorted[10];
   merge(list, sorted, 0, 4, 9);
 
+  for(int i=0; i<10;i++){
+	cerr <<list[i]<<" " << endl;
+}
   
 
   //결과는?
