@@ -4,7 +4,7 @@
     // find the minimum of list[i] through list[n-1] 
     min = i; 
     for(j = i + 1; j < n; j++){ 
-      if(list[j].key < list[min].key) min = j; 
+      if(list[j] < list[min]) min = j; 
     } 
     swap(&list[i], &list[min]); 
     } 
