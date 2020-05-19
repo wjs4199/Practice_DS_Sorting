@@ -26,10 +26,8 @@ void merge(int list[],int sorted[], int i, int mid, int n) {
 
 
 int main() {
-  
-  int list[10]={2,4,9,80,97,12,18,42,55,62};
-  int sorted[10];
-  merge(list, sorted, 0, 4, 9);
+  Element list[MAX_SIZE];
+
 
   for(int i=0; i<10;i++){
 	cout <<list[i]<<" " << endl;
