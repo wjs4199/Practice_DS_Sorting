@@ -1,11 +1,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
-
+#include "sorting.h"
 using namespace std;
-typedef struct element{
-  int key;
-}Element; 
+
 
 void merge(int list[],int sorted[], int i, int mid, int n) {
   //i=> 리스트의 첫번째 , mid=> 리스트를 반으로 나눈 수, n=>리스트의 길이(마지막을 가리킴)
