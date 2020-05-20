@@ -29,3 +29,23 @@ void InsertionSort(Element list[], int n) {
       list[j+1] = list[j]; list[j+1] = next; 
   } 
 }
+
+void QuickSort(Element list[], int left, int right) { 
+  int pivot, i, j; 
+  if (left < right) { 
+    i = left;     
+    j = right+1; 
+    pivot = list[left].key; 
+    do { 
+      do i++; 
+      while(i <= right && list[i].key < pivot); 
+      do j--; 
+      while(j  > left  && list[j].key > pivot); 
+      if(i<j) swap(&list[i], &list[j]); 
+    } while (i<j);     
+    swap(&list[left], &list[j]); 
+    QuickSort(list, left, j-1); 
+    QuickSort(list, j+1, right); 
+  } 
+}
+
