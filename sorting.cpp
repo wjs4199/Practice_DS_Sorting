@@ -48,7 +48,18 @@ void QuickSort(Element list[], int left, int right) {
     QuickSort(list, j+1, right); 
   } 
 }
+
 void merge(Element list[], Element sorted[], int i, int m, int n) { 
   int j, k, t; j = m + 1; 
-  // the first element of the second sorted 
-  list k = i; while(i <= m && j <= n){ if(list[i].key < list[j].key) sorted[k++] = list[i++]; else                          sorted[k++] = list[j++]; } if(i > m) // All elements in left list are copied while(j<=n) sorted[k++] = list[j++]; // remained elements in right else // There are remained elements in left list while(i<=m) sorted[k++] = list[i++]; }
+  // the first element of the second sorted list 
+  k = i; 
+  while(i <= m && j <= n){ 
+    if(list[i].key < list[j].key) sorted[k++] = list[i++]; 
+    else                          sorted[k++] = list[j++]; 
+  } 
+  if(i > m) // All elements in left list are copied 
+    while(j<=n) sorted[k++] = list[j++]; 
+  // remained elements in right 
+  else // There are remained elements in left list 
+    while(i<=m) sorted[k++] = list[i++]; 
+}
