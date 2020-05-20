@@ -19,3 +19,13 @@ void BubbleSort(Element list[], int n) {
       if (list[j].key > list[j+1].key) 
         swap(&list[j], &list[j+1]); 
 }
+
+void InsertionSort(Element list[], int n) { 
+  int i, j; 
+  Element next; 
+  for(i = 1; i < n; i++) { 
+    next = list[i]; 
+    for(j = i – 1; j >= 0 && next.key < list[j].key; j--) 
+      list[j+1] = list[j]; list[j+1] = next; 
+  } 
+}
