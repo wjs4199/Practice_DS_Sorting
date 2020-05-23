@@ -81,3 +81,13 @@ void adjust(Element list[], int root, int n) {
   list[child/2] = temp; 
 }
 
+void HeapSort(Element list[], int n) { 
+  int i, j; 
+  for(i = n/2; i > 0; i--) //adjusting the tree from n/2 to 1 
+    adjust(list, i, n); 
+  for(i = n - 1; i > 0; i--){    //delete the largest sequentially 
+    swap(&list[1], &list[i+1]); //put the largest to the last 
+    adjust(list, 1, i);         //adjust the unsorted part 
+  } 
+}
+
