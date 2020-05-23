@@ -63,3 +63,21 @@ void merge(Element list[], Element sorted[], int i, int m, int n) {
   else // There are remained elements in left list 
     while(i<=m) sorted[k++] = list[i++]; 
 }
+
+void adjust(Element list[], int root, int n) { 
+  int child, rootkey; 
+  Element temp = list[root]; 
+  rootkey = list[root].key; c
+    hild = 2 * root; // left child 
+  while(child <= n){ 
+    if((child < n) && (list[child].key < list[child+1].key)) child++; 
+    // right child is larger 
+    if(rootkey > list[child].key) break; 
+    else { 
+      list[child/2] = list[child]; 
+      child *= 2; 
+    } 
+  } 
+  list[child/2] = temp; 
+}
+
