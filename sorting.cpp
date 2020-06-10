@@ -20,6 +20,8 @@ void BubbleSort(Element list[], int n) {
         swap(&list[j], &list[j+1]); 
 }
 
+
+
 void InsertionSort(Element list[], int n) { 
   int i, j; 
   Element next; 
